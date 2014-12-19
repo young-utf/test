@@ -1,0 +1,51 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+$fa-font-path: "/bower_components/font-awesome/fonts";
+
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+@import 'font-awesome/scss/font-awesome';
+
+/**
+ * App-wide Styles
+ */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.yum {
+  border: solid 2px green;
+  margin: 10px;
+}
+
+.hello{
+  border: solid 2px red;
+  & .ninja {
+    margin: 10px;
+    border: solid 2px blue;
+  }
+
+  .ninja & {
+    margin: 10px;
+    border: solid 2px black;
+  }
+}
+
+.haha {
+  &.yum {
+    text-align: center;
+  }
+}
+
+
+
+
+
+// Component styles are injected through grunt
+// injector
+@import 'account/login/login.scss';
+@import 'admin/admin.scss';
+@import 'main/main.scss';
+// endinjector
