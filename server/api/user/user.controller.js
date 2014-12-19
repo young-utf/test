@@ -4,6 +4,10 @@ var User = require('./user.model');
 var passport = require('passport');
 var config = require('../../config/environment');
 var jwt = require('jsonwebtoken');
+var Ninja = require('tracer').console({
+  format : "({{file}}:{{line}}) : {{message}}"
+});
+
 
 var validationError = function(res, err) {
   return res.json(422, err);
@@ -16,6 +20,7 @@ var validationError = function(res, err) {
 exports.index = function(req, res) {
   User.find({}, '-salt -hashedPassword', function (err, users) {
     if(err) return res.send(500, err);
+    Ninja.debug(users);
     res.json(200, users);
   });
 };

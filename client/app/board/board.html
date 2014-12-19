@@ -1,0 +1,17 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="board-list">
+  <div class="post" ng-repeat="post in Posts">
+    title: {{post.title}}, writer: {{post.writer}}, tags: {{post.tags}} <a href="" ng-click="delete(post._id)">XXX</a>
+  </div>
+</div>
+
+<div class="board-write">
+  title: <input type="text" ng-model="title"/><br>
+  caption: <input type="text" ng-model="caption"/><br>
+  writer: <input type="text" ng-model="writer"/><br>
+  tag: <input type="text" ng-model="tags"/>
+
+
+  <a href="" ng-click="writePost()" id="write-post" class="btn btn-github">Post !!</a>
+</div>

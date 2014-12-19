@@ -8,6 +8,7 @@ angular.module('ninjaTestApp', [
   'btford.socket-io'
 ])
   .config(function ($routeProvider, $locationProvider, $httpProvider) {
+
     $routeProvider
       .otherwise({
         redirectTo: '/'

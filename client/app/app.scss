@@ -22,7 +22,8 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 
 .hello{
   border: solid 2px red;
-  & .ninja {
+
+  .ninja {
     margin: 10px;
     border: solid 2px blue;
   }
@@ -47,5 +48,6 @@ $fa-font-path: "/bower_components/font-awesome/fonts";
 // injector
 @import 'account/login/login.scss';
 @import 'admin/admin.scss';
+@import 'board/board.scss';
 @import 'main/main.scss';
 // endinjector
