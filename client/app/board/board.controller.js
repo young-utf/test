@@ -10,6 +10,10 @@ angular.module('ninjaTestApp')
       $rootScope.Posts = data;
       console.log(err);
     });
+
+    Post.query({}).then(function (data) {
+      console.log(data);
+    })
     // Use the User $resource to fetch all users
     //$scope.users = User.query();
     $scope.delete = function (postId) {
@@ -17,10 +21,6 @@ angular.module('ninjaTestApp')
       Post.remove({id: postId}, function (data, err) {
         console.log(data);
         console.log(err);
-        Post.query({}, function (data, err) {
-          $rootScope.Posts = data;
-          console.log(err);
-        });
       });
     }
 
