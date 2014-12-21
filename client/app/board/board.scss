@@ -1,22 +1,22 @@
 .board-list {
   text-align: center;
   float: left;
-  width: 500px;
-  height: 500px;
-  overflow: auto;
+  width: 45%;
+  height: auto;
+  overflow-y: auto;
   border: solid 2px black;
 }
 
 .board-write {
   text-align: center;
   float: left;
-  width: 500px;
-  height: 100px;
+  width: 45%;
+  height: auto;
   border: solid 2px #DDDDDD;
 }
 
 .post {
   height: auto;
   margin: 15px;
-  width: 450px;
+  width: 95%;
 }

@@ -25,7 +25,7 @@ exports.postOnePost = function (req, res) {
 
 exports.getPosts = function (req, res, next) {
   Ninja.debug('getPosts');
-  Ninja.debug(req.body);
+  Ninja.debug(req);
   Post.find({}, function (err, posts) {
     if (err) res.send(401);
     Ninja.debug(posts);

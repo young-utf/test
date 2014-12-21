@@ -6,14 +6,8 @@
 angular.module('ninjaTestApp')
   .controller('BoardCtrl', function ($rootScope, $scope, $http, Auth, User, Post) {
     $scope.writeCaption = '';
-    Post.query({}, function (data, err) {
-      $rootScope.Posts = data;
-      console.log(err);
-    });
+    $rootScope.Posts = Post.put({});
 
-    Post.query({}).then(function (data) {
-      console.log(data);
-    })
     // Use the User $resource to fetch all users
     //$scope.users = User.query();
     $scope.delete = function (postId) {
